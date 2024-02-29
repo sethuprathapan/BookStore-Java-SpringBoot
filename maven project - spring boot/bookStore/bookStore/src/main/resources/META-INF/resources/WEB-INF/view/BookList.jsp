@@ -54,6 +54,7 @@
       <td >${b.name}</td>
       <td >${b.author}</td>
       <td >${b.price}</td>
+      <td ><button type="button" class="btn btn-success">ADD</button></td>
     </tr>
     </c:forEach>
    
