@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>New_Book</title>
+    <title>Book_register</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
@@ -32,6 +32,28 @@
     </div>
   </div>
 </nav>
-New_Book
+  <div class="container p-5 my-5" style="border:1px solid black;">
+  <form class="col-md-4 offset-md-4" action="save" method="post" object="${book }">
+  <h2 class="text-center">Edit Book here..</h2>
+  <div class="mb-3">
+  <input type="text" value="${book.id }"> 
+    <label for="name" class="form-label">Book name</label>
+    <input type="text" class="form-control" id="name" name="name" value="${book.name }">
+    
+  </div>
+   <div class="mb-3">
+    <label for="Author" class="form-label">Author</label>
+    <input type="text" class="form-control" id="Author" name="author" value="${book.author }">
+    
+  </div>
+   <div class="mb-3">
+    <label for="price" class="form-label">price</label>
+    <input type="text" class="form-control" id="price" name="price" value="${book.price }">
+    
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  
+</form></div>
+
 </body>
 </html>

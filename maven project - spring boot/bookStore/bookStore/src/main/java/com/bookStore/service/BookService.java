@@ -21,5 +21,7 @@ public List<Book> getAllBook(){
 	return bRepo.findAll();
 }
 
-
+public Book getBookById(int id) {
+	return bRepo.findById(id).get();
+}
 }

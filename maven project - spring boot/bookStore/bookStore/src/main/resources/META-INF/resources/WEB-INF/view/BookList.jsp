@@ -17,7 +17,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">MyBooks</a>
+          <a class="nav-link active" aria-current="page" href="MyBookList">MyBooks</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="New_Book">New Book</a>
@@ -54,8 +54,12 @@
       <td >${b.name}</td>
       <td >${b.author}</td>
       <td >${b.price}</td>
-      <td ><button type="button" class="btn btn-success">ADD</button></td>
+      <td ><button type="button" class="btn btn-success" ><a href="mylist?id=${b.id}">Link</a>
+</button></td>
+<td ><button type="button" class="btn btn-success" ><a href="edit?id=${b.id}">Edit</a>
+</button></td>
     </tr>
+    
     </c:forEach>
    
   </tbody>

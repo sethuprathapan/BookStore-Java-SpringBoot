@@ -1,5 +1,7 @@
 package com.bookStore.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +14,15 @@ public class MyBookListService {
 	private myBookListRepository mybooklist;
 	public void saveMyBookList(MyBookList mybook) {
 		mybooklist.save(mybook);
+	}
+	
+	public List<MyBookList> getMyBookList(){
+		return mybooklist.findAll();
+	}
+	
+	public void deleteMybook(int id) {
+		
+		mybooklist.deleteById(id);;
 	}
 
 }
