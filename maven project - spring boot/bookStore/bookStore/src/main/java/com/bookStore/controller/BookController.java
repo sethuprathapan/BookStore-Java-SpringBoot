@@ -60,6 +60,13 @@ public class BookController {
 		
 		
 	}
+	@RequestMapping("/deleteBook")
+	 public String deleteBookfun(@RequestParam("id") int id) {
+		serviceB.deleteBook(id);
+		myBookService.deleteBook(id);
+		
+		return "redirect:/BookList";
+	}
 	@RequestMapping("/mylist")
 	    public String getMyBookList(@RequestParam("id") int id) {
 		 Book b=serviceB.getBookById(id);	

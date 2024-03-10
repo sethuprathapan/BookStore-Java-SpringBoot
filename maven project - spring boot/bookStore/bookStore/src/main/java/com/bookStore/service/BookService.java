@@ -16,6 +16,9 @@ public void save(Book b) {
 	bRepo.save(b);
 	
 }
+public void deleteBook(int id) {
+	bRepo.deleteById(id);
+}
 
 public List<Book> getAllBook(){
 	return bRepo.findAll();

@@ -9,7 +9,7 @@
   <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">BookStore</a>
+    <a class="navbar-brand" href="home">BookStore</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -36,7 +36,7 @@
   <form class="col-md-4 offset-md-4" action="save" method="post" object="${book }">
   <h2 class="text-center">Edit Book here..</h2>
   <div class="mb-3">
-  <input type="text" value="${book.id }"> 
+  <input type="hidden" value="${book.id }"> 
     <label for="name" class="form-label">Book name</label>
     <input type="text" class="form-control" id="name" name="name" value="${book.name }">
     

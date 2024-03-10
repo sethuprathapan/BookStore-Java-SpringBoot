@@ -8,9 +8,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
+  <script>
+ 
+  function showMessage(id) {
+	    var result = confirm('Are you sure you want to proceed?');
+	    if (result) {
+	        alert('Confirmed! Proceeding...');
+	        window.location.href = 'deleteBook?id='+id;
+	    } else {
+	        // User clicked cancel or closed the dialog
+	        // You can handle this case if needed
+	    }
+	}
+
+</script>
+  
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">BookStore</a>
+    <a class="navbar-brand" href="home">BookStore</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -54,9 +69,11 @@
       <td >${b.name}</td>
       <td >${b.author}</td>
       <td >${b.price}</td>
-      <td ><button type="button" class="btn btn-success" ><a href="mylist?id=${b.id}">Link</a>
+      <td ><button type="button" class="btn btn-success" ><a href="mylist?id=${b.id}">Add to Mybook</a>
 </button></td>
-<td ><button type="button" class="btn btn-success" ><a href="edit?id=${b.id}">Edit</a>
+<td ><button type="button" class="btn btn-secondary" ><a href="edit?id=${b.id}">Edit</a>
+</button></td>
+<td ><button type="button" onclick="showMessage(${b.id})" class="btn btn-danger" >Delete
 </button></td>
     </tr>
     

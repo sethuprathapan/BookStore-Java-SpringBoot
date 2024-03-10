@@ -24,5 +24,8 @@ public class MyBookListService {
 		
 		mybooklist.deleteById(id);;
 	}
+	public void deleteBook(int id) {
+		mybooklist.deleteById(id);
+	}
 
 }
